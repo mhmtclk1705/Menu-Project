@@ -1,11 +1,14 @@
 import React from "react";
-
+// datayı props olarak alıyoruz
 const Menu = ({ items }) => {
   return (
     <div className="section-center">
+      {/* map ile data içerisinde gezip html taglerine yazdırıyoruz */}
       {items.map((menuItem) => {
+        // destructuring
         const { id, title, img, desc,price } = menuItem;
         return (
+          // html
           <article key={id} className="menu-item">
             <img src={img} alt={title} className="photo" />
             <div className="item-info">
